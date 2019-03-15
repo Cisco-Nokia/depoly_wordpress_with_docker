@@ -18,6 +18,10 @@ if [ ! -z ${DOCKER_YUM_REPO+X} ]; then
     --add-repo \
     ${DOCKER_YUM_REPO}
 	yum makecache fast
+else
+    yum-config-manager \
+     --add-repo \
+     https://download.docker.com/linux/centos/docker-ce.repo
 fi
 	
 echo "###########安装docker主程序###########"
