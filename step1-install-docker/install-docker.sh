@@ -49,8 +49,8 @@ docker info
 echo "####如果以上输出正常，则表示docker正确安装。#####"
 
 echo "####开始安装docker-compose####"
-curl -L https://github.com/docker/compose/releases/download/1.23.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-chmod +x /usr/local/bin/docker-compose
+curl -L https://github.com/docker/compose/releases/download/1.23.2/docker-compose-`uname -s`-`uname -m` -o /usr/bin/docker-compose
+chmod +x /usr/bin/docker-compose
 # 添加命令补全功能
 yum -y install bash-completion
 curl -L https://raw.githubusercontent.com/docker/compose/1.23.2/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
